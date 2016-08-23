@@ -1,11 +1,16 @@
-function getValue () {
-	var x = prompt('Enter a number between 1 and 100');
-	var numberGiven = +'x';
-	console.log(numberGiven);
-}
+function fizzBuzz(){
+	var getValue = prompt('Enter a number.');
+	var newValue = +getValue;
 
-function fizzBuzz () {
-	for (var i = 1; i < numberGiven; i++) {
+	if (isNaN(newValue)) {
+		alert('Not a number. Please refresh page and enter a number.');
+	}
+
+	else if (newValue % 1 !== 0) {
+		alert('Do not use decimals. Please refresh page and enter a whole number.');
+	}
+
+	else for (var i = 1; i <= newValue; i++) {
 		if (i%3===0 && i%5===0) {
 			$("body").append("fizzbuzz" + "<br>");
 		}
@@ -21,9 +26,6 @@ function fizzBuzz () {
 	}
 }
 
-
 $(document).ready(function() {
-	getValue ();
+fizzBuzz();
 });
-
-
